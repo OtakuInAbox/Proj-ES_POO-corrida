@@ -2,7 +2,11 @@ package cartas;
 
 import java.util.Random;
 import cartas.carta.Carta;
-
+/**
+ * Representa o baralho de cartas
+ * @author Daviw
+ *
+ */
 public class Cartas {
 	
 	final int CARTASBARALHO = 12;
@@ -12,6 +16,10 @@ public class Cartas {
 	int valido; 
 
 	// Construtores
+	/**
+	 * Construtor do baralho
+	 * @param baralhoInteiro Representa o baralho
+	 */
 	public Cartas(boolean baralhoInteiro) {
 		cartas = new Carta[CARTASBARALHO];
 		valido = 0;
@@ -21,6 +29,10 @@ public class Cartas {
 	}
 
 	// Métodos
+	/**
+	 * Este metodo permite obter a carta do topo
+	 * @return Retorna a primeira carta do baralho
+	 */
 	public Carta getCartaTopo() {
 		Carta tmp;
 
@@ -33,7 +45,11 @@ public class Cartas {
 			return tmp;
 		}
 	}
-
+     /**
+      * Adicona uma carta ao topo
+      * @param c Representa a carta
+      * @return Adiciona uma carta ao topo em caso de verdade
+      */
 	public boolean addCartaTopo(Carta c) {
 		if (valido < cartas.length) {
 			cartas[valido] = c;   
@@ -42,7 +58,10 @@ public class Cartas {
 		}
 		return false;
 	}
-
+  
+	/**
+	 * Permite a criacao do baralho
+	 */
 	private void criarBaralho() {
 	
 		for(int i = 0; i<12;i++){
@@ -50,7 +69,9 @@ public class Cartas {
 		}
 	}
 
-	
+	/**
+	 * Faz o embaralhar 
+	 */
 	public void embaralhar() {
 		Random rGen = new Random();  		
 		 

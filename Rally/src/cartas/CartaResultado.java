@@ -1,13 +1,21 @@
 package cartas;
 
 import java.util.ArrayList;
-
+/**
+ * Obtem o resulatdo das cartas
+ * @author Daviw
+ *
+ */
 public class CartaResultado {
 	
-	// properties
+	// propriedades
 	int[] resultados;
 
-	// constructors
+	// construtor
+	/**
+	 * Serve como construtor
+	 * @param nJogadores Representa o jogador
+	 */
 	public CartaResultado(int nJogadores) {
 		resultados = new int[nJogadores];
 
@@ -15,11 +23,21 @@ public class CartaResultado {
 				resultados[i] = 0;
 	}
 
-	// methods
+	// metodos
+	/**
+	 * Obtem a pontuacao do jogo
+	 * @param jogadorNao Prametro que representa o jogador
+	 * @return Retorna o resultado
+	 */
 	public int getScore(int jogadorNao) {
 		return resultados[jogadorNao];
 	}
 
+	/**
+	 * Atualiza os dados do jogador
+	 * @param jogadorNao representa o joagdor
+	 * @param quantidade A quantiade a adicionar
+	 */
 	public void update(int jogadorNao, int quantidade) {
 		resultados[jogadorNao] += quantidade;
 	}
@@ -36,6 +54,10 @@ public class CartaResultado {
 		return s;
 	}
 
+	/**
+	 * Obtem o vencedor da partida
+	 * @return Retorna o vencedor
+	 */
 	public int[] getVencedores() {
 		
 		int resultadoMax = 0;

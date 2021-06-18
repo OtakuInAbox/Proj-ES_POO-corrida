@@ -1,8 +1,11 @@
 package cartas;
-
+/**
+ * Representa a carta
+ * @author Daviw
+ *
+ */
 
 public class carta {
-	
 	
 	public static class Carta {
 		final String[] TIPO = { "Negativa", "Positiva"};
@@ -10,22 +13,38 @@ public class carta {
 
 		final int CARTASCADATIPO = 6;
 
-		// properties
+		// propriedades
 		int cartaNao;
 
-		// constructors
+		// construtor
+		/**
+		 * Representa o construtor da classe
+		 * @param valor Tem o valor da carta
+		 * @param tipo Representa o tipo de carta
+		 */
 		public Carta(int valor, int tipo) {
 			cartaNao = valor + tipo * CARTASCADATIPO;
 		}
-
+     
+		/**
+		 * Representa a carta
+		 * @param nCarta
+		 */
 		public Carta(int nCarta) {
 			cartaNao = nCarta;
 		}
 
+		/**
+		 * Obtem o valor da carta
+		 * @return Retrona o valora da carta
+		 */
 		public int getValor() {
 			return cartaNao % CARTASCADATIPO;
 		}
 
+		/*
+		 * Serve para obter o tipo de carta
+		 */
 		public int getTipo() {
 			return cartaNao / CARTASCADATIPO;
 		}
@@ -34,6 +53,11 @@ public class carta {
 			return VALOR[getValor()] + " of " + TIPO[getTipo()];
 		}
 
+		/**
+		 * Serve para verificar se as cartas sao iguiais
+		 * @param c Cartas
+		 * @return Retorna um valor de true ou false dependendo se e ou nao igual
+		 */
 		public boolean iguais(Carta c) {
 			boolean res;
 			if (getValor() == c.getValor() && getTipo() == c.getTipo()) {
@@ -42,6 +66,7 @@ public class carta {
 				res = false;
 			return res;
 		}
+
 
 		public int compareTo(Carta c) {
 			if(getValor()==c.getValor())

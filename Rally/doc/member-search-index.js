@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"cartas","c":"Troco","l":"getDistancia()"},{"p":"cartas","c":"Troco","l":"getInicio()"},{"p":"cartas","c":"Troco","l":"getTempoMedio()"},{"p":"cartas","c":"Troco","l":"isFim()"},{"p":"cartas","c":"Troco","l":"Troco()","url":"%3Cinit%3E()"},{"p":"cartas","c":"Troco","l":"Troco(int, int, int, boolean)","url":"%3Cinit%3E(int,int,int,boolean)"}]
